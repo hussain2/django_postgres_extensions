@@ -9,7 +9,7 @@ class UpdateQuery(BaseUpdateQuery):
         querysets.
         """
         values_seq = []
-        for name, val in iter(values):
+        for name, val in values.items():
             if '__' in name:
                 indexes = name.split('__')
                 field_name = indexes.pop(0)
